@@ -444,7 +444,7 @@ def getClosest(item: HRR, memoryDict: dict,
              for key, value in memoryDict.items()}
     sortedDists = sorted(dists.keys(),
                          key=(lambda key: dists[key]), reverse=True)
-    return {k: round(dists[k], 5) for k in
+    return {k: round(dists[k].real, 5) for k in
             sortedDists[:min(howMany, len(memoryDict))]}
     #sortedDists[:howMany]
 
